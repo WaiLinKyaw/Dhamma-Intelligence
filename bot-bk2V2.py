@@ -379,7 +379,7 @@ def main():
 
     if job_queue:
         mm_tz = pytz.timezone("Asia/Yangon")
-        job_queue.run_daily(morning_job, time=datetime.time(hour=7, minute=0, tzinfo=mm_tz))
+        job_queue.run_daily(morning_job, time=datetime.time(hour=07, minute=30, tzinfo=mm_tz))
         job_queue.run_daily(noon_job, time=datetime.time(hour=12, minute=0, tzinfo=mm_tz))
         job_queue.run_daily(evening_job, time=datetime.time(hour=19, minute=0, tzinfo=mm_tz))
 
