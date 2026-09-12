@@ -1,0 +1,8 @@
+python-telegram-bot[job-queue]
+google-genai
+python-dotenv
+flask
+pytz
+aiohttp
+requests
+psycopg2-binary
