@@ -332,12 +332,10 @@ async def resource_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     elif r_type == "book":
         await query.message.reply_text("📖 **ဆရာကြီး၏ စာအုပ်များ ပေးပို့နေပါသည်...**")
         for title, source in resources:
-            if os.path.exists(source):
-                with open(source, "rb") as doc:
-                    await context.bot.send_document(
-                        chat_id=query.message.chat_id,
-                        document=doc,
-                        caption=f"📘 {title}"
+            await context.bot.send_document(
+                    chat_id=query.message.chat_id,
+                    document=source,
+                    caption=f"📘 {title}"
                     )
 
 # စာသားနှင့် မီနူးများကို ကိုင်တွယ်သည့် Handler
